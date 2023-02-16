@@ -75,12 +75,22 @@ document.getElementById('last-card').addEventListener('click', ()=>{
     let firstInput = document.getElementById('first-input').value;
     let secondInput = document.getElementById('second-input').value;
 
+
+    // console.log(typeof firstInput, typeof secondInput)
+
+
+    if (isNaN(parseFloat(firstInput)) || isNaN(parseFloat(secondInput))) {
+        alert('Either or both inputs are not a number.')
+        return;
+      }
+    else{
+        alert('this is  a number')
+    }
     let totaltq = parseFloat(firstInput) + parseFloat(secondInput);
 
     displaydata(name , firstInput , secondInput , totaltq);
 
 
-    console.log(firstInput, secondInput)
 });
 
 
